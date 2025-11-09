@@ -1,0 +1,34 @@
+/* Simple retro (1990s) look: minimal, monospace, limited colors */
+html,body{
+  height:100%;
+  margin:0;
+  font-family: "Courier New", Courier, monospace;
+  background:#fff;
+  color:#000;
+}
+.frame{
+  max-width:960px;
+  margin:24px auto;
+  padding:18px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06) inset; /* subtle separation, no heavy border */
+}
+h1{font-size:24px;margin:0 0 12px}
+h2{font-size:16px;margin:14px 0 8px}
+p{line-height:1.6;font-size:15px;margin:8px 0}
+.lede{font-weight:600;margin-bottom:10px}
+
+/* two-column layout: content left, map right */
+.columns{display:flex;flex-wrap:wrap;gap:18px}
+.content{flex:1 1 52%;min-width:260px}
+.map{flex:0 0 320px}
+.map canvas{display:block;border:1px solid #ddd;background:#f6fbff}
+.caption{font-size:12px;color:#444;margin-top:6px}
+
+.notes{margin-top:16px;font-size:13px}
+
+@media (max-width:700px){
+  .columns{flex-direction:column}
+  .map{order:2}
+}
+/* keep everything simple and readable — no gradients, no fancy colors */
